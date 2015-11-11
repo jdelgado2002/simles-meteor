@@ -1,6 +1,7 @@
 <template name="ApplicationLayout">
-<body>	    
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<body>
+	
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
 
             <div class="navbar-header">
@@ -15,7 +16,12 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                {{#if currentUser}}
+                <li>
+                	<a class="logout">logout</a>
+                </li>
+                {{else}}
+                	<li>
                         <a href="#mobileDescription">Mobile</a>
                     </li>
                     <li>
@@ -24,11 +30,20 @@
                     <li>
                         <a href="#contactUs">Contact</a>
                     </li>
+                    <li>
+                        <a href="{{pathFor 'login'}}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{{pathFor 'join'}}">join simles</a>
+                    </li>
+                {{/if}} 
                 </ul>
             </div>
 
         </div>
     </nav>
+
+ 
 
     {{> yield}}
     
