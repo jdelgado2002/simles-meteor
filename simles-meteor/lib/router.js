@@ -19,3 +19,7 @@ Router.route('/home', function () {
 Router.route('/login', function(){
 	this.render('login');
 });
+
+Router.route('/join', function(){
+	this.render('join');
+});

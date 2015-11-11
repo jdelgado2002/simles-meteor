@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav navbar-right">
                 {{#if currentUser}}
                 <li>
-                	<a class="logout">logout</a>
+                	<a class="logout">logout {{currentUser.username}}</a>
                 </li>
                 {{else}}
                 	<li>
