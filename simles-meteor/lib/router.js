@@ -8,13 +8,10 @@ Router.route('/', function () {
     // if the user is not logged in, render the Login template
     this.render('splash');
   } else {  
-  	this.render('home');
+  	this.render('dashboard');
   }
 });
 
-Router.route('/home', function () {
-  this.render('home');
-});
 
 Router.route('/login', function(){
 	this.render('login');
@@ -22,4 +19,16 @@ Router.route('/login', function(){
 
 Router.route('/join', function(){
 	this.render('join');
+});
+
+Router.route('/contacts', function(){
+  this.render('contacts');
+});
+
+Router.route('/clients', function(){
+  this.render('clients');
+});
+
+Router.route('/dashboard', function(){
+  this.render('dashboard');
 });

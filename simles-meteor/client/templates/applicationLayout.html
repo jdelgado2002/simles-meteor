@@ -18,6 +18,18 @@
                 <ul class="nav navbar-nav navbar-right">
                 {{#if currentUser}}
                 <li>
+                    <a href="{{pathFor 'dashboard'}}">Dashboard</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'contacts'}}">Contacts</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'clients'}}">Clients</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'tasks'}}">Tasks</a>
+                </li>
+                <li>
                 	<a class="logout">logout {{currentUser.username}}</a>
                 </li>
                 {{else}}
