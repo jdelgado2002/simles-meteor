@@ -1,3 +1,18 @@
 <template name="clients">
 <h1>Clients</h1>
+    <form class="new-client">
+    	<input type="text" name="clientName" placeholder="Type to add new client" />
+    </form>
+<ul>
+	{{#each clients}}
+	{{> clientItems}}
+	{{/each}}
+</ul>
+
+</template>
+
+<template name="clientItems">
+<li>
+	<span>{{name}}</span>
+</li>
 </template>
