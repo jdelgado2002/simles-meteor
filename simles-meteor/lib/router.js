@@ -13,7 +13,7 @@ Router.route('/', function () {
   }
 });
 
-
+//authentication routes
 Router.route('/login', function(){
 	this.render('login');
 });
@@ -22,6 +22,7 @@ Router.route('/join', function(){
 	this.render('join');
 });
 
+//Lists
 Router.route('/contacts', function(){
   this.render('contacts');
 });
@@ -29,6 +30,16 @@ Router.route('/contacts', function(){
 Router.route('/clients', function(){
   this.render('clients');
 });
+
+//details
+
+Router.route('clientShow', {
+  path: '/clients/:_id',
+  data: function(){    return Clients.findOne(this.params._id);  },
+  action: function() {    this.render('clientShow');  }
+});
+
+//dashboard
 
 Router.route('/dashboard', function(){
   this.render('dashboard');

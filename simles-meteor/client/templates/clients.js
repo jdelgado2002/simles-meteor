@@ -1,6 +1,5 @@
 Meteor.subscribe('clients');
 
-
 Template.clients.helpers({
 	clients: function(){
 		return Clients.find({});

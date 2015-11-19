@@ -14,5 +14,7 @@
 <template name="clientItems">
 <li>
 	<span>{{name}}</span>
+	<span>{{_id}}</span>s
+	<span><a href="{{pathFor 'clientShow' _id=_id}}">details</a></span>
 </li>
 </template>
