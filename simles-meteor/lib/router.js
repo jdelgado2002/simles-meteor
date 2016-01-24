@@ -15,23 +15,26 @@ Router.route('/', function () {
 });
 
 //authentication routes
-Router.route('/login', function(){
-	this.render('login');
+Router.route('/login', {
+	name : "login"
 });
 
-Router.route('/join', function(){
-	this.render('join');
+Router.route('/join', {
+	name : "join"
 });
 
 //Lists
-Router.route('/contacts', function(){
-  this.render('contacts');
+Router.route('/contacts', {
+  name : "contacts"
 });
 
-Router.route('/clients', function(){
-  this.render('clients');
+Router.route('/clients', {
+  name : "clients"
 });
 
+Router.route('/tasks', {
+  name : "tasks"
+});
 //details
 
 Router.route('clientShow', {
@@ -42,6 +45,6 @@ Router.route('clientShow', {
 
 //dashboard
 
-Router.route('/dashboard', function(){
-  this.render('dashboard');
+Router.route('/dashboard', {
+  name : "dashboard"
 });
