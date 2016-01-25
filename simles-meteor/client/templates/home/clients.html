@@ -1,20 +1,33 @@
 <template name="clients">
 <h1>Clients</h1>
-    <form class="new-client">
-    	<input type="text" name="clientName" placeholder="Type to add new client" />
-    </form>
-<ul>
+<form class="new-client">
+    <div class="input-group">
+    	<div class="addon-lg">
+    		<input class="form-control" type="text" name="clientName" placeholder="Type to add new client"/>
+    	</div>    	
+    		<span class="input-group-btn">
+    		<button class="btn btn-default" type="submit">
+    			<i class="fa fa-plus-square"></i>
+    		</button>
+    	</span>
+    </div>
+</form>
+
+<ul class="list-group">
 	{{#each clients}}
 	{{> clientItems}}
 	{{/each}}
 </ul>
 
+{{#if moreResults}}
+<button class="btn btn-lg btn-primary btn-block more-clients">More...</button>
+{{/if}}
+
 </template>
 
 <template name="clientItems">
-<li>
+<li class="list-group-item">
 	<span>{{name}}</span>
-	<span>{{_id}}</span>s
-	<span><a href="{{pathFor 'clientShow' _id=_id}}">details</a></span>
+	<span><a href="{{pathFor 'clientShow' _id=_id}}"><i class="fa fa-info-circle fa-lg pull-right"></i></a></span>
 </li>
 </template>
